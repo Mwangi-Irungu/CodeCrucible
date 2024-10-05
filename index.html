@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code</title>
+    <link rel="icon" href="Images/Logo/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .bg-image {
   /* The image used */
-  background-image: url(Images/Logo/CodeCrucible-r.png);
+  background-image: url(Images/Logo/Logo.png);
 
   /* Add the blur effect */
   filter: blur(5px);
@@ -18,6 +19,7 @@
 
   /* Full height */
   height: 100%;
+  width: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -147,6 +149,9 @@
   .bg-text{
     display: none;
   }
+  .teamx{
+    display: none;
+  }
 }
 
 /* Show the menu when toggled */
@@ -184,7 +189,7 @@
             <a href="#contact">Contact</a>
           </div>
         </div>
-        <a href="#donate" class="donate-btn">Donate</a>
+        <a href="https://www.buymeacoffee.com/codecrucible" class="donate-btn">Donate</a>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="color: black;" >☰</a>
       </div>
 </section>
@@ -220,20 +225,15 @@
           <h3><span class="typcn typcn-pen icon"></span>Our Vision</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
-        <div class="row">
-          <div class="six columns">
-            <h3><span class="typcn typcn-cog-outline icon"></span>Core Values</h3>
-            <ol>
-            <li>Inclusivity: We welcome everyone, regardless of their background or experience level.</li> 
-            <li>             Innovation: We encourage experimentation and creativity, providing a space where ideas can flourish.</li>
-            <li>Collaboration: Teamwork is essential. We believe that great ideas come from collaboration and shared experiences.</li>
-            <li>Empowerment: Our goal is to empower our members with the knowledge and skills they need to succeed
-                in the tech world.</li>
+        <div class="row" style="text-align: center;">
+          <div style="display: inline-block; text-align: left;">
+            <h3 style="text-align: center;"><span class="typcn typcn-cog-outline icon"></span>Core Values</h3>
+            <ol style="text-align: center;float: left;">
+              <li>Inclusivity: We welcome everyone, regardless of their background or experience level.</li>
+              <li>Innovation: We encourage experimentation and creativity, providing a space where ideas can flourish.</li>
+              <li>Collaboration: Teamwork is essential. We believe that great ideas come from collaboration and shared experiences.</li>
+              <li>Empowerment: Our goal is to empower our members with the knowledge and skills they need to succeed in the tech world.</li>
             </ol>
-          </div>
-          <div class="six columns">
-            <h3><span class="typcn typcn-lightbulb icon"></span>Our Mission</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </div>
         </div>
       </div>
@@ -260,17 +260,16 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+                <img class="img-fluid" src="Images/team/steve.jpeg" style="height: 100%;" >
               </div>
               <div class="team-content">
-                <h3 class="name">Michele Miller</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">Steve Mwangi</h3>
+                <h4 class="title">Founder</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                <li><a href="https://www.linkedin.com/in/iammwangi/" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
           </div>
@@ -328,6 +327,7 @@
         </div>
         
         <!-- Second Row with 4 Columns -->
+         <div class="teamx">
         <div class="row1">
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
@@ -398,6 +398,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
       
   </section>
@@ -532,9 +533,9 @@
   <footer>
     <div class="container">
       <div class="nine columns">
-        <p>Created with love by Jeff.</p>
+        <p>Created with love by steve</p>
       </div>
-      <div class="three columns"> <span class="typcn typcn-social-facebook-circular socialIcons"></span> <span class="typcn typcn-social-instagram-circular socialIcons"></span> <span class="typcn typcn-social-google-plus-circular socialIcons"></span> <span class="typcn typcn-social-linkedin-circular socialIcons"></span> </div>
+      
     </div>
   </footer>
   <script>
@@ -547,5 +548,6 @@
   }
 }
   </script>
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="codecrucible" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
