@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
     <style>
         .bg-image {
   /* The image used */
@@ -33,6 +35,8 @@
   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
+  font-size: 50px;
+  font-family: cursive;
   border: 3px solid #f1f1f1;
   position: absolute;
   top: 50%;
@@ -177,9 +181,9 @@
 <body>
     <!-- Header Section
 ––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section id="home">
+<section class="animated-section" id="home">
     <div class="header">
-        <a href="#default" class="logo">CodeCrucible</a>
+        <a href="#default" class="logo" style="color: purple;" ><strong>Code<span style="color: orangered;" >Crucible</span></strong></a>
         <div class="header-right" id="nav-links">
           <div class="nav-links">
             <a class="active" href="#home">Home</a>
@@ -196,7 +200,7 @@
 <section class="hero">     
 <div class="bg-image"></div>
 <div class="bg-text">
-  <h1>Code<span>Crucible</span> Tech Hub</h1>
+  <h1 style="font-size: 80px;font-weight: 900;" >Code<span>Crucible</span> Tech Hub</h1>
   <p>Test, Refine, Innovate</p>
 </div>
 </div>
@@ -250,9 +254,9 @@
         <div class="block"></div>
         <p>The CodeCrucible Community Based Organization is made up of dedicated members who are passionate about
             technology and helping others. The group includes developers, designers, and volunteers who work together to
-            support the community. They hold workshops and work on projects to teach digital skills and solve local
-            problems. By sharing their knowledge and ideas, they create a friendly space for everyone to learn and grow.
-            Together, they aim to make a positive difference in their community.</p>
+            support the community. We hold workshops and work on projects to teach digital skills and solve local
+            problems. By sharing our knowledge and ideas, we create a friendly space for everyone to learn and grow.
+            Together, we aim to make a positive difference in their community.</p>
       </div>
       <div class="containera">
         <!-- First Row with 4 Columns -->
@@ -276,16 +280,15 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+                <img class="img-fluid" src="Images/team/Felo.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Patricia Knott</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">Felix Otieno</h3>
+                <h4 class="title">Head of Operations</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -293,16 +296,15 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+                <img class="img-fluid" src="Images/team/msoo1.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Justin Ramos</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">Teresia Muthoni</h3>
+                <h4 class="title">Community Outreach</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -313,13 +315,12 @@
                 <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
               </div>
               <div class="team-content">
-                <h3 class="name">Mary Huntley</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">Ruth Wambui</h3>
+                <h4 class="title">Member</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -335,13 +336,12 @@
                 <img class="img-fluid" src="https://picsum.photos/130/130?image=855">
               </div>
               <div class="team-content">
-                <h3 class="name">Anna Keller</h3>
-                <h4 class="title">UI/UX Designer</h4>
+                <h3 class="name">Charity Wairimu</h3>
+                <h4 class="title">Member</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -349,16 +349,15 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=854">
+                <img class="img-fluid" src="Images/team/Bughaa.JPG">
               </div>
               <div class="team-content">
-                <h3 class="name">John Smith</h3>
-                <h4 class="title">Project Manager</h4>
+                <h3 class="name">Dominic Omondi</h3>
+                <h4 class="title">Member</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -369,13 +368,12 @@
                 <img class="img-fluid" src="https://picsum.photos/130/130?image=853">
               </div>
               <div class="team-content">
-                <h3 class="name">Paul Green</h3>
+                <h3 class="name">Dennis Kitheka</h3>
                 <h4 class="title">Backend Developer</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -386,13 +384,12 @@
                 <img class="img-fluid" src="https://picsum.photos/130/130?image=852">
               </div>
               <div class="team-content">
-                <h3 class="name">Sophia Brown</h3>
-                <h4 class="title">Frontend Developer</h4>
+                <h3 class="name">James Mwangi</h3>
+                <h4 class="title">Member</h4>
               </div>
               <ul class="social">
                 <li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                <li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
                 <li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
               </ul>
             </div>
@@ -408,7 +405,7 @@
   
   <section id="skills">
     <div class="container">
-      <h1>What We Offer</h1>
+      <h1>What We Do</h1>
       <div class="block"></div>
       <div class="row">
         <!-- Card 1 -->
@@ -456,88 +453,108 @@
     </div>
   </section>
   
-  
-  
-  <!-- Portfolio Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  
+
   <section id="portfolio">
     <div class="container">
       <h1>Work</h1>
       <div class="block"></div>
-      <div class="row">
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work One"/></div>
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Two"/></div>
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Three"/></div>
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Four"/></div>
-      </div>
-      <div class="row" style="margin-top: 30px;">
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Five"/></div>
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Six"/></div>
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Seven"/></div>
-        <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Eight"/></div>
-      </div>
+      <div class="containerb">
+        <img src="Images/work/LR001.JPG" alt="Learning center">
+        <img src="Images/work/LR002.JPG" alt="class 1">
+        <img src="Images/work/LR003.JPG" alt="class 2">
+        <img src="Images/work/meeting1.JPG" alt="meeting 1">
+        <img src="Images/work/LR004.JPG" alt="class 3">
+        <img src="Images/work/LR005.JPG" alt="class 4">
     </div>
   </section>
   
-  <!-- Testimonials Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+
   
-  <section id="testimonial">
-    <div class="container">
-      <div class="quoteLoop">
-        <blockquote class="quote"> <img src="http://placehold.it/100x100" width="100" height="100" alt=""/>
-          <h5>&nbsp;<br>
-            &rdquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;<br>
-            <small>Steve Bruce, Sed ut perspiciatis unde omnis</small></h5>
-        </blockquote>
-        <blockquote class="quote"> <img src="http://placehold.it/100x100" width="100" height="100" alt=""/>
-          <h5>&nbsp;<br>
-            &ldquo;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&rdquo;<br>
-            <small>Tom Jones, Sed ut perspiciatis unde omnis</small></h5>
-        </blockquote>
-      </div>
-    </div>
-  </section>
   
   <!-- Contact Section
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
   
   <section id="contact">
-    <div class="container">
-      <h1>Contact</h1>
-      <div class="block"></div>
-      <form>
-        <div class="row">
-          <div class="six columns">
-            <label for="exampleRecipientInput">Name</label>
-            <input class="u-full-width" type="text">
-          </div>
-          <div class="six columns">
-            <label for="exampleEmailInput">Email</label>
-            <input class="u-full-width" type="email">
-          </div>
-        </div>
-        <div class="row">
-          <label for="exampleMessage">Message</label>
-          <textarea class="u-full-width"></textarea>
-          <input class="button-primary" type="submit" value="Submit">
-        </div>
-      </form>
-    </div>
+    <form method="post" name="contact_form"
+action="contact-form-handler.php">
+    Your Name:
+    <input type="text" name="name">
+
+    Email Address:
+    <input type="text" name="email">
+
+    Message:
+    <textarea name="message"></textarea>
+
+    <input type="submit" value="Submit">
+</form>
   </section>
   
   <!-- Footer Section
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  
-  <footer>
-    <div class="container">
-      <div class="nine columns">
-        <p>Created with love by steve</p>
-      </div>
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3><strong>Code<span>Crucible</span></strong></h3>
+
+      <p class="footer-links">
+        <a href="#home" class="link-1">Home</a>
+        
+        <a href="#about">About us</a>
       
+        <a href="#team">Meet Us</a>
+      
+        <a href="#skills">Our Work</a>
+        
+        <a href="#">Partner</a>
+        
+        <a href="#">Donate</a>
+      </p>
+
+      <p class="footer-company-name">CodeCrucible © 2024</p>
     </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Ayany Estate, Kibera</span>Nairobi, Kenya</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+254 796 840 511</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:code.codecrucible@gmail.com">code.codecrucble@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About Us</span>
+        CodeCrucible is a dynamic community of learners, creators, and tech enthusiasts dedicated to fostering a culture of collaboration and exploration.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+    </div>
+
   </footer>
+  
+ 
   <script>
    function toggleMenu() {
   var navLinks = document.getElementById("nav-links");
@@ -547,7 +564,29 @@
     navLinks.className = "header-right";
   }
 }
+
+function animateSection() {
+  const animatedSection = document.querySelector('.animated-section');
+
+  if (isElementInView(animatedSection)) {
+    animatedSection.classList.add('slide-in-right');
+  }
+}
+
+function isElementInView(element) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= windowHeight   
+
+  );
+}
   </script>
   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="codecrucible" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  <script src="mail.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
+
 </body>
 </html>
