@@ -11,7 +11,9 @@
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
     <style>
-
+.icon{
+  display: none;
+}
 /* Position text in the middle of the page/image */
 .bg-text {
   background-color: rgb(0,0,0); /* Fallback color */
@@ -116,6 +118,9 @@
     z-index: 8;
     
   }
+  .nav-links a {
+    color: rgb(235, 246, 253);
+  }
 
   .header-right .nav-links a {
     text-align: center;
@@ -144,21 +149,67 @@
 }
 
 /* Show the menu when toggled */
-.header-right.responsive .nav-links {
-  display: flex;
-}
-
-@media screen and (min-width: 769px) {
-  .header .icon {
-    display: none;
-  }
-
-  .header-right {
+.header {
     display: flex;
-  }
-  
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+    z-index: 1000;
 }
 
+.logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+/* Donate button styling */
+.donate-btn {
+    padding: 0.5rem 1rem;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .header-right {
+        display: none; /* Initially hidden on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: hsla(240, 100%, 50%, 0.3);
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .header-right.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .icon {
+        display: block; /* Show toggle icon */
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+}
 @media (max-width: 992px) { /* Medium screens (e.g., tablets) */
   .containera {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -194,20 +245,20 @@
     <!-- Header Section
 ––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section class="animated-section" id="home">
-    <div class="header">
-        <a href="#default" class="logo" style="color: purple;" ><strong>Code<span style="color: orangered;" >Crucible</span></strong></a>
-        <div class="header-right" id="nav-links">
-          <div class="nav-links">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#team">Family</a>
-            <a href="#skills">Our Work</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-        <a href="https://www.buymeacoffee.com/codecrucible" class="donate-btn">Donate</a>
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="color: black;" >☰</a>
+  <div class="header">
+      <a href="#default" class="logo" style="color: purple;">
+          <strong>Code<span style="color: orangered;">Crucible</span></strong>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="color: black;">☰</a>
+      <div class="header-right nav-links" id="nav-links">
+          <a class="active" href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Our Work</a>
+          <a href="#contact">Contact</a>
+          <a href="https://forms.gle/rnPMV94jev3UvdGk7">Partner</a>
+          <a href="https://www.buymeacoffee.com/codecrucible" class="donate-btn">Donate</a>
       </div>
+  </div>
 </section>
 <section class="main">
   <ul class='slider'>
@@ -592,13 +643,9 @@
   </script>
  
   <script>
-   function toggleMenu() {
-  var navLinks = document.getElementById("nav-links");
-  if (navLinks.className === "header-right") {
-    navLinks.className += " responsive";
-  } else {
-    navLinks.className = "header-right";
-  }
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show");
 }
 
 function animateSection() {
