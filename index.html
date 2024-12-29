@@ -11,15 +11,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
     <style>
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
 
 /* Position text in the middle of the page/image */
 .bg-text {
@@ -116,19 +107,21 @@
 @media screen and (max-width: 768px) {
   .header-right .nav-links {
     display: none;
-    flex-direction: column;
+    flex-direction: 2 column;
     width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 8;
+    
   }
 
   .header-right .nav-links a {
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid #444;
+    color: #ddd;
   }
 
   .header .icon {
@@ -143,9 +136,6 @@
     display: none;
   }
   .bg-text{
-    display: none;
-  }
-  .teamx{
     display: none;
   }
   .video-background {
@@ -167,6 +157,35 @@
     display: flex;
   }
   
+}
+
+@media (max-width: 992px) { /* Medium screens (e.g., tablets) */
+  .containera {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+@media (max-width: 768px) { /* Small screens (e.g., phones) */
+  .containera {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 576px) { /* Extra small screens */
+  .containera {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
+
+.picture img {
+  width: 100%;
+  height: auto; /* Ensure images are responsive */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.team-content {
+  text-align: center; /* Center align text */
+  padding: 1rem 0;
 }
 </style>
 </head>
@@ -199,14 +218,14 @@
     </li>
     <li class='item' style="background-image: url(Images/work/Image\ 3.JPG)">
       <div class='content'>
-        <h2 class='title'>PRACTISE</h2>
-        <p class='description'> Regular workshops and hackathons are organized to teach new technologies, frameworks, or methodologies. These events provide immersive experiences where learners can experiment and innovate.  </p>
+        <h2 class='title'>PRACTICE</h2>
+        <p class='description'>We organize regular workshops and hackathons to teach new technologies, frameworks, or methodologies. These events provide immersive experiences where learners can experiment and innovate.  </p>
       </div>
     </li>
     <li class='item' style="background-image: url(Images/work/Image\ 4.JPG)">
       <div class='content'>
         <h2 class='title'>RESEARCH</h2>
-        <p class='description'>The platform provides access to a rich repository of resources, including experienced teachers, coding tutorials, templates, open-source projects, and documentation. These materials help learners advance at their own pace.  </p>
+        <p class='description'>The platform provides access to a rich repository of resources, including experienced teachers, coding tutorials, templates, open-source projects, books and documentation. These materials help learners advance at their own pace.  </p>
       </div>
     </li>
     <li class='item' style="background-image: url(Images/work/Image\ 5.JPG)">
@@ -300,29 +319,29 @@
               </div>
               <div class="team-content">
                 <h3 class="name">Steve Mwangi</h3>
-                <h4 class="title">Founder</h4>
+                <h4 class="title">Co-founder<br>Director</h4>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="Images/team/Felo.jpeg">
+                <img class="img-fluid" src="Images/team/Frej.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Felix Otieno</h3>
-                <h4 class="title">Head of Operations</h4>
+                <h3 class="name">Frej Larssen</h3>
+                <h4 class="title">Co-founder<br>Board Observer</h4>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="Images/team/msoo1.jpeg">
+                <img class="img-fluid" src="Images/team/Ruth.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Teresia Muthoni</h3>
-                <h4 class="title">Community Outreach</h4>
+                <h3 class="name">Ruth Wambui</h3>
+                <h4 class="title">Chairperson</h4>
             </div>
             </div>
           </div>
@@ -333,7 +352,7 @@
               </div>
               <div class="team-content">
                 <h3 class="name">Dominic Omondi</h3>
-                <h4 class="title">Social Media Manager</h4>
+                <h4 class="title">Secretary</h4>
               </div>
               </div>
           </div>
@@ -345,11 +364,11 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="Images/team/Charity.png">
+                <img class="img-fluid" src="Images/team/Melkio.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Charity Wairimu</h3>
-                <h4 class="title">Member</h4>
+                <h3 class="name">Melkio Ogutu</h3>
+                <h4 class="title">Treasurer</h4>
               </div>
             </div>
           </div>
@@ -357,10 +376,10 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="Images/team/Deno.JPG">
+                <img class="img-fluid" src="Images/team/Daniel.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Dennis Kitheka</h3>
+                <h3 class="name">Daniel Ouma</h3>
                 <h4 class="title">Member</h4>
               </div>
             </div>
@@ -379,16 +398,27 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+                <img class="img-fluid" src="Images/team/Felo.jpeg">
               </div>
               <div class="team-content">
-                <h3 class="name">Ruth Wambui</h3>
+                <h3 class="name">Felix Otieno</h3>
                 <h4 class="title">Member</h4>
               </div>
             </div>
           </div>
       </div>
-      
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="Images/team/Deno.JPG">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Dennis Kitheka</h3>
+            <h4 class="title">Member</h4>
+          </div>
+        </div>
+      </div>
+  </div>
   </section>
   
   <!-- Skills Section

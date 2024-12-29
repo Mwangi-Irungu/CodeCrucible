@@ -131,8 +131,8 @@
 
 @media (width < 650px) {
   .content {
-    & .title        { font-size: 0.9rem; }
-    & .description  { font-size: 0.65rem; }
+    & .title        { font-size: 1.5rem; }
+    & .description  { font-size: 1rem; }
     & button        { font-size: 0.7rem; }
   }
   .item {
