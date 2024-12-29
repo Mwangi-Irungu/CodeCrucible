@@ -121,8 +121,8 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: #333;
-    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 8;
   }
 
   .header-right .nav-links a {
@@ -168,10 +168,7 @@
   }
   
 }
-.hero {
-    height: 100%;
-}
-    </style>
+</style>
 </head>
 <body>
     <!-- Header Section
@@ -192,31 +189,55 @@
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="color: black;" >☰</a>
       </div>
 </section>
-<section class="hero">  
-  <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <img src="Images/work/LR002.JPG" style="width:100%">
-      <div class="text">Welcome to Code Crucible Tech Hub</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <img src="Images/work/LR003.JPG" style="width:100%">
-      <div class="text">We offer training programs on various IT skills, including coding, digital literacy, and entrepreneurship</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <img src="Images/work/LR004.JPG" style="width:100%">
-      <div class="text">We are dedicated to fostering collaboration and exploration</div>
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-
+<section class="main">
+  <ul class='slider'>
+    <li class='item' style="background-image: url(Images/work/Image\ 1.JPG)">
+      <div class='content'>
+        <h2 class='title'>LEARN</h2>
+        <p class='description'>Code Crucible emphasizes hands-on projects, allowing learners to apply theoretical knowledge to real-world challenges. This approach helps in understanding concepts deeply and building a portfolio that demonstrates their skills.</p>
+      </div>
+    </li>
+    <li class='item' style="background-image: url(Images/work/Image\ 3.JPG)">
+      <div class='content'>
+        <h2 class='title'>PRACTISE</h2>
+        <p class='description'> Regular workshops and hackathons are organized to teach new technologies, frameworks, or methodologies. These events provide immersive experiences where learners can experiment and innovate.  </p>
+      </div>
+    </li>
+    <li class='item' style="background-image: url(Images/work/Image\ 4.JPG)">
+      <div class='content'>
+        <h2 class='title'>RESEARCH</h2>
+        <p class='description'>The platform provides access to a rich repository of resources, including experienced teachers, coding tutorials, templates, open-source projects, and documentation. These materials help learners advance at their own pace.  </p>
+      </div>
+    </li>
+    <li class='item' style="background-image: url(Images/work/Image\ 5.JPG)">
+      <div class='content'>
+        <h2 class='title'>COLLABORATE</h2>
+        <p class='description'>
+          We cultivate a community of learners, mentors, and peers who share ideas, provide feedback, and solve problems together. Collaboration enhances learning by exposing participants to diverse perspectives and solutions.
+        </p>
+      </div>
+    </li>
+    <li class='item' style="background-image: url(Images/work/Image\ 7.JPG)">
+      <div class='content'>
+        <h2 class='title'>INNOVATE</h2>
+        <p class='description'>
+          By focusing on creativity and innovation, Code Crucible inspires learners to think outside the box and experiment with cutting-edge technologies, preparing them for future trends in tech.
+        </p>
+      </div>
+    </li>
+    <li class='item' style="background-image: url(Images/work/Image\ 8.JPG)">
+      <div class='content'>
+        <h2 class='title'>GROW</h2>
+        <p class='description'>The initiative emphasizes inclusivity, encouraging people from various backgrounds to learn and grow. This diversity enhances the learning experience and ensures a broad range of ideas and perspectives.  </p>
+      </div>
+    </li>
+  </ul>
+  <nav class='nav2'>
+    <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+    <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+  </nav>
 </section>
-  <!-- About Section
+ <!-- About Section
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
     
   <section id="about">
@@ -566,11 +587,23 @@ function isElementInView(element) {
 
   );
 }
+
+  </script>
+  <script>
+    const slider = document.querySelector('.slider');
+
+function activate(e) {
+  const items = document.querySelectorAll('.item');
+  e.target.matches('.next') && slider.append(items[0])
+  e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+}
+
+document.addEventListener('click',activate,false);
   </script>
   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="codecrucible" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
   <script src="mail.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
