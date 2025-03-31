@@ -21,15 +21,36 @@
   color: white;
   font-weight: bold;
   font-size: 50px;
-  font-family: cursive;
-  border: 3px solid #f1f1f1;
+  padding: 20px;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
   width: 80%;
-  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: 'poppins';
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  line-height: 1.5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
   text-align: center;
 }
 /* Style the header with a grey background and some padding */
@@ -239,13 +260,44 @@
   text-align: center; /* Center align text */
   padding: 1rem 0;
 }
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-item .slide-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    top: 0;
+    left: 100%;
+}
+
+.carousel-item.active {
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+
+.carousel-item div {
+    height: 100vh;
+}
+
 </style>
 </head>
 <body>
-    <!-- Header Section
-––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section class="animated-section" id="home">
-  <div class="header">
+    <!-- Header Section––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="header">
       <a href="#default" class="logo" style="color: purple;">
           <strong>Code<span style="color: orangered;">Crucible</span></strong>
       </a>
@@ -255,59 +307,56 @@
           <a href="#about">About</a>
           <a href="#skills">Our Work</a>
           <a href="#contact">Contact</a>
-          <a href="https://forms.gle/rnPMV94jev3UvdGk7">Partner</a>
-          <a href="https://www.buymeacoffee.com/codecrucible" class="donate-btn">Donate</a>
+          <a href="https://forms.gle/rnPMV94jev3UvdGk7">Partner With Us</a>
+
       </div>
   </div>
 </section>
-<section class="main">
-  <ul class='slider'>
-    <li class='item' style="background-image: url(Images/work/Image\ 1.JPG)">
-      <div class='content'>
-        <h2 class='title'>LEARN</h2>
-        <p class='description'>Code Crucible emphasizes hands-on projects, allowing learners to apply theoretical knowledge to real-world challenges. This approach helps in understanding concepts deeply and building a portfolio that demonstrates their skills.</p>
+  <!-- Hero Section––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="carousel">
+    <div class="carousel-item">
+        <div class="slide-image"
+            style="background-image: 
+url('Images/work/Image\ 3.JPG');">
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="slide-image"
+            style="background-image: 
+url('Images/work/Image\ 6.JPG');">
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="slide-image"
+            style="background-image: 
+url('Images/work/Image\ 7.JPG');">
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="slide-image"
+            style="background-image: 
+url('Images/work/Image\ 8.JPG');">
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="slide-image"
+          style="background-image: 
+url('Images/work/Image\ 5.JPG');">
       </div>
-    </li>
-    <li class='item' style="background-image: url(Images/work/Image\ 3.JPG)">
-      <div class='content'>
-        <h2 class='title'>PRACTICE</h2>
-        <p class='description'>We organize regular workshops and hackathons to teach new technologies, frameworks, or methodologies. These events provide immersive experiences where learners can experiment and innovate.  </p>
-      </div>
-    </li>
-    <li class='item' style="background-image: url(Images/work/Image\ 4.JPG)">
-      <div class='content'>
-        <h2 class='title'>RESEARCH</h2>
-        <p class='description'>The platform provides access to a rich repository of resources, including experienced teachers, coding tutorials, templates, open-source projects, books and documentation. These materials help learners advance at their own pace.  </p>
-      </div>
-    </li>
-    <li class='item' style="background-image: url(Images/work/Image\ 5.JPG)">
-      <div class='content'>
-        <h2 class='title'>COLLABORATE</h2>
-        <p class='description'>
-          We cultivate a community of learners, mentors, and peers who share ideas, provide feedback, and solve problems together. Collaboration enhances learning by exposing participants to diverse perspectives and solutions.
-        </p>
-      </div>
-    </li>
-    <li class='item' style="background-image: url(Images/work/Image\ 7.JPG)">
-      <div class='content'>
-        <h2 class='title'>INNOVATE</h2>
-        <p class='description'>
-          By focusing on creativity and innovation, Code Crucible inspires learners to think outside the box and experiment with cutting-edge technologies, preparing them for future trends in tech.
-        </p>
-      </div>
-    </li>
-    <li class='item' style="background-image: url(Images/work/Image\ 8.JPG)">
-      <div class='content'>
-        <h2 class='title'>GROW</h2>
-        <p class='description'>The initiative emphasizes inclusivity, encouraging people from various backgrounds to learn and grow. This diversity enhances the learning experience and ensures a broad range of ideas and perspectives.  </p>
-      </div>
-    </li>
-  </ul>
-  <nav class='nav2'>
-    <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-    <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
-  </nav>
-</section>
+  </div>
+  <div class="carousel-item">
+    <div class="slide-image"
+        style="background-image: 
+url('Images/work/Image\ 5.JPG');">
+    </div>
+</div>
+</div>
+  <div class="bg-text">
+    <h1>Welcome to CodeCrucible</h1>
+    <p>Where Ideas Ignite and Innovation Thrives</p>
+    <a href="#about" class="btn">Learn More</a>
+  </div>
  <!-- About Section
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
     
@@ -594,7 +643,7 @@
         
         <a href="#">Partner</a>
         
-        <a href="#">Donate</a>
+
       </p>
 
       <p class="footer-company-name">CodeCrucible © 2024</p>
@@ -638,7 +687,34 @@
 
   </footer>
   <script>
-      let slideIndex = 0; showSlides(); function showSlides() { let i; let slides = document.getElementsByClassName("mySlides"); for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; } slideIndex++; if (slideIndex > slides.length) {slideIndex = 1} slides[slideIndex - 1].style.display = "block"; setTimeout(showSlides, 5000);} function plusSlides(n) { slideIndex += n; if (slideIndex > document.getElementsByClassName("mySlides").length) { slideIndex = 1; } if (slideIndex < 1) { slideIndex = document.getElementsByClassName("mySlides").length; } showSlideManually(slideIndex); } function showSlideManually(n) { let i; let slides = document.getElementsByClassName("mySlides"); for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; } slides[n - 1].style.display = "block"; }
+      window.onload = function () {
+    let slides = 
+        document.getElementsByClassName('carousel-item');
+
+    function addActive(slide) {
+        slide.classList.add('active');
+    }
+
+    function removeActive(slide) {
+        slide.classList.remove('active');
+    }
+
+    addActive(slides[0]);
+    setInterval(function () {
+        for (let i = 0; i < slides.length; i++) {
+            if (i + 1 == slides.length) {
+                addActive(slides[0]);
+                setTimeout(removeActive, 5000, slides[i]);
+                break;
+            }
+            if (slides[i].classList.contains('active')) {
+                setTimeout(removeActive, 5000, slides[i]);
+                addActive(slides[i + 1]);
+                break;
+            }
+        }
+    }, 1500);
+};
   </script>
  
   <script>
